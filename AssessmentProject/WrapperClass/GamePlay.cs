@@ -14,8 +14,8 @@ namespace AssessmentProject.WrapperClass
    public class GamePlay
     {
 
-        RestRequest restRequest;
-        RestClient restClient;
+        IRestClient restClient = new RestClient();
+        IRestRequest restRequest = new RestRequest();
         GamePlayResponseModel gamePlayResponseModel;
         private static string hostName;
        

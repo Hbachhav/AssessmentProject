@@ -19,16 +19,18 @@ namespace AssessmentProject.TestCase
         LoginResponseModel loginResponseModel;
         public static string token;
 
-        LoginModel testdata = JsonConvert.DeserializeObject<LoginModel>(File.ReadAllText(@"TestData\LoginTestData.json"));
+        LoginModel testdata = JsonConvert.DeserializeObject<LoginModel>(File.ReadAllText(@"C:\Users\BHAGVAT\source\repos\AssessmentProject\AssessmentProject\TestData\LoginTestData.json"));
+        
+        
         [Test]
-        public async void LoginTestAPI()
+        public async Task LoginTestAPI()
         {
             loginModel = new LoginModel();
             loginModel.userName = testdata.userName;
             loginModel.password = testdata.password;
             loginModel.sessionProductId = testdata.sessionProductId;
-            loginModel.environment.clientTypeId = testdata.environment.clientTypeId;
-            loginModel.environment.languageCode = testdata.environment.languageCode;
+            loginModel.clientTypeId = testdata.clientTypeId;
+            loginModel.languageCode = testdata.languageCode;
             loginModel.numLaunchTokens = testdata.numLaunchTokens;
             loginModel.marketType = testdata.marketType;
 
@@ -43,6 +45,7 @@ namespace AssessmentProject.TestCase
                 Console.WriteLine("Login API passed");
             }
             token = response.tokens.userToken;
+           
         }
         
     }

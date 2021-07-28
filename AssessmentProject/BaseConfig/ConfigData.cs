@@ -40,7 +40,7 @@ namespace RestSharpDemo.BaseConfig
 
         public static string ModuleId { get => moduleid; set => guid = moduleid; }
 
-        public static string ClientId { get => clientid; set => guid = clientid; }
+        public static string ClientId { get => clientid; set => guid = moduleid; }
 
 
 

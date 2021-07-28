@@ -6,7 +6,9 @@ namespace AssessmentProject.Models
 {
     public class LoginModel
     {
-        public Environment environment { get; set; }
+        public int clientTypeId { get; set; }
+        public string languageCode { get; set; }
+   //     public Environment environment { get; set; }
         public string userName { get; set; }
         public string password { get; set; }
         public string sessionProductId { get; set; }
@@ -16,8 +18,7 @@ namespace AssessmentProject.Models
 
         public class Environment
     {
-        public int clientTypeId { get; set; }
-        public string languageCode { get; set; }
+        
     }
     
 }

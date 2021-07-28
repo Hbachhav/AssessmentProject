@@ -15,8 +15,11 @@ namespace AssessmentProject.WrapperClass
    public class Login
     {
 
-        RestRequest restRequest;
-        RestClient restClient;
+        IRestClient restClient = new RestClient();
+        IRestRequest restRequest = new RestRequest();
+
+       // RestRequest restRequest;
+      //  RestClient restClient;
         private static string hostName;
         LoginResponseModel loginResponseModel;
 
